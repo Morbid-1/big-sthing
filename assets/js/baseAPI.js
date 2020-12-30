@@ -14,7 +14,7 @@ $.ajaxPrefilter(function(options) {
     }
 
     options.compplete = function (res) {
-        if (res.responseJSON.status === 1 && res.responseJSON.status === '身份验证失败') {
+        if (res.responseJSON.status === 1 && res.responseJSON.message === '身份验证失败') {
             // 清空本地数据 token
             localStorage.removeItem('token')
             // 然后强制跳转 登录注册页面
