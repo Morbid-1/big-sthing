@@ -43,7 +43,7 @@ function getUserInfo() {
             // console.log('执行了 complete 回调');
             console.log(res);
             // responseJSON 数据返回信息 打印res可见  
-            if (res.responseJSON.status === 1 && res.responseJSON.status === '身份验证失败'){
+            if (res.responseJSON.status === 1 && res.responseJSON.message === '身份验证失败'){
                 // 1. 清空本地储存 token
                 localStorage.removeItem('token');
                 // 2.强制返回登录页面
